@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyCareerPath</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+    <header>
+        <div class="logo">MyCareerPath</div>
+        <nav>
+            <ul>
+                <li><a href="{{ url_for('home') }}">HOME</a></li>
+                <li><a href="{{ url_for('kampus') }}">KAMPUS</a></li>
+                <li><a href="{{ url_for('jurusan') }}">JURUSAN</a></li>
+                <li><a href="{{ url_for('rekomendasi') }}" class="active">REKOMENDASI</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main><br>
+        <h3 class="pagename"><i class="fa-solid fa-house"></i>Beranda/Rekomendasi</h3><br>
+        <div class="rekomendasi"><br>
+            <div class="judul">
+                <h2><center>PILIH JURUSAN MASIH BINGUNG?</center></h2>
+            </div>
+            <div class="search-bar">
+                <form action="{{ url_for('recommend') }}" method="post">
+                    <input type="text" name="input_text" placeholder="Masukkan minat dan bakat Anda">
+                    <button type="submit"><i class="fa-solid fa-magnifying-glass">Cari</i></button>
+                </form>
+            </div>      
+            <div class="rekomendasi2">
+                <ul>
+                    {% for recommendation in recommendations %}
+                        <li>{{ recommendation }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h1>MyCareerPath</h1>
+                <ul>
+                    <li><h4>Panduan Memilih Kampus jurusan dan karir</h4></li>
+                    <i class="fa-brands fa-facebook"></i>
+                    <i class="fa-brands fa-twitter"></i>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Tentang Kami</h3>
+                <ul>
+                    <li><a href="#">Kontak Kami</a></li>
+                    <li><a href="#">Pusat Bantuan</a></li>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Privacy</a></li>
+                    <li><a href="#">Sistem</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Tempu Karir</h3>
+                <ul>
+                    <li><a href="#">Rekomendasi Kampus</a></li>
+                    <li><a href="#">Rekomendasi Jurusan</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Tetap Terhubung</h3>
+                <input type="email" placeholder="Masukkan email...">
+                <button>Beritahu Saya</button>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            &copy; 2024 MyCareerPath
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyCareerPath</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="logo">MyCareerPath</div>
+        <nav>
+            <ul>
+                <li><a href="{{ url_for('home') }}" class="active">HOME</a></li>
+                <li><a href="{{ url_for('kampus') }}">KAMPUS</a></li>
+                <li><a href="{{ url_for('jurusan') }}">JURUSAN</a></li>
+                <li><a href="{{ url_for('rekomendasi') }}">REKOMENDASI</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+
+        <div class="slider">
+            <div class="list">
+                <div class="item">
+                    <img src="{{ url_for('static', filename='asset/Banner.png') }}" alt="">
+                </div>
+                <div class="item">
+                    <img src="{{ url_for('static', filename='asset/Banner.png') }}" alt="">
+                </div>
+                <div class="item">
+                    <img src="{{ url_for('static', filename='asset/Banner.png') }}" alt="">
+                </div>
+                <div class="item">
+                    <img src="{{ url_for('static', filename='asset/Banner.png') }}" alt="">
+                </div>
+                <div class="item">
+                    <img src="{{ url_for('static', filename='asset/Banner.png') }}" alt="">
+                </div>
+            </div>
+            <div class="buttons">
+                <button id="prev"><</button>
+                <button id="next">></button>
+            </div>
+            <ul class="dots">
+                <li class="active"></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </div>
+    
+
+        <div class="judul">
+            <h1>REKOMENDASI KAMPUS</h1>
+        </div>
+
+        <section class="kampus">
+            <div class="kampus-card">
+                <div class="kampus-info">
+                    <img src="{{ url_for('static', filename='asset/unej.png') }}" alt="Universitas Jember">
+                    <h3>Universitas Jember</h3>
+                    <p>Universitas Jember adalah institusi pendidikan tinggi berkelas dunia...</p>
+                </div>
+            </div>
+            <div class="kampus-card">
+                <div class="kampus-info">
+                    <img src="{{ url_for('static', filename='asset/um.png') }}" alt="Universitas Negeri Malang">
+                    <h3>Universitas Negeri Malang</h3>
+                    <p>UM merupakan perguruan tinggi di lingkungan Kementerian Pendidikan dan Kebudayaan di bawah pembinaan Direktorat Jenderal Pendidikan Tinggi ...</p>
+                </div>
+            </div>
+            <div class="kampus-card">
+                <div class="kampus-info">
+                    <img src="{{ url_for('static', filename='asset/ub.png') }}" alt="Universitas Brawijaya">
+                    <h3>Universitas Brawijaya</h3>
+                    <p>Universitas Brawijaya (UB) merupakan perguruan tinggi negeri yang didirikan pada tanggal 5 Januari 1963 di Malang, Jawa Timur. UB awalnya adalah ...</p>
+                </div>
+            </div>
+            <div class="kampus-card">
+                <div class="kampus-info">
+                    <img src="{{ url_for('static', filename='asset/uny.png') }}" alt="Universitas Negeri Yogyakarta">
+                    <h3>Universitas Negeri Yogyakarta</h3>
+                    <p>Universitas Negeri Yogyakarta (UNY) merupakan salah satu perguruan tinggi negeri di Indonesia. Kampus utama universitas ini terletak di Kabupaten ...</p>
+                </div>
+            </div>
+        </section>
+        <li><a href="kampus.html"><h4>Lihat Semua</h4></a></li>
+        <div class="judul2">
+            <h1>REKOMENDASI JURUSAN</h1>
+        </div>
+        <section class="kampus">
+            <div class="kampus-card">
+                <div class="kampus-info">
+                    <img src="{{ url_for('static', filename='asset/kedokteran.png') }}" alt="Kedokteran">
+                    <h3>Kedokteran</h3>
+                    <p>Jurusan kedokteran akan mempelajari hal-hal terkait tubuh dan penyakit seperti anatomi, fisiologi, ilmu penyakit dalam, ilmu kesehatan ...</p>
+                </div>
+            </div>
+            <div class="kampus-card">
+                <div class="kampus-info">
+                    <img src="{{ url_for('static', filename='asset/teknik nuklir.png') }}" alt="Teknik Nuklir">
+                    <h3>Teknik Nuklir</h3>
+                    <p>Teknik Nuklir mempunyai visi untuk ”Menjadi lembaga pendidikan tinggi yang unggul di bidang teknologi nuklir”. Oleh karenanya Program ...</p>
+                </div>
+            </div>
+            <div class="kampus-card">
+                <div class="kampus-info">
+                    <img src="{{ url_for('static', filename='asset/arsitektur.png') }}" alt="Arsitektur">
+                    <h3>Arsitektur</h3>
+                    <p>Jurusan Arsitektur, kamu bakal mendesain bangunan sesuai kebutuhan dan tentu saja dengan memperhatikan nilai fungsi, keindahan, dan keamanan, ya! Tidak ...</p>
+                </div>
+            </div>
+            <div class="kampus-card">
+                <div class="kampus-info">
+                    <img src="{{ url_for('static', filename='asset/desain.png') }}" alt="Keperawatan">
+                    <h3>Keperawatan</h3>
+                    <p>Ilmu Keperawatan merupakan bidang studi yang menyiapkan kamu menjadi seorang perawat. Di jurusan ini Quipperian akan mempelajari teori dan teknologi ...</p>
+                </div>
+            </div>
+        </section>
+        <li><a href="jurusan.html"><h4>Lihat Semua</h4></a></li>
+    </main>
+    
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h1>MyCareerPath</h1>
+                <ul>
+                    <li><h4>Panduan Memilih Kampus jurusan dan karir</h4></li>
+                    <i class="fa-brands fa-facebook"></i>
+                    <i class="fa-brands fa-twitter"></i>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Tentang Kami</h3>
+                <ul>
+                    <li><a href="#">Kontak Kami</a></li>
+                    <li><a href="#">Pusat Bantuan</a></li>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Privacy</a></li>
+                    <li><a href="#">Sistem</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Tempu Karir</h3>
+                <ul>
+                    <li><a href="#">Rekomendasi Kampus</a></li>
+                    <li><a href="#">Rekomendasi Jurusan</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Tetap Terhubung</h3>
+                <input type="email" placeholder="Masukkan email...">
+                <button>Beritahu Saya</button>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            &copy; 2024 MyCareerPath
+        </div>
+    </footer>
+    <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+</body>
+</html>
